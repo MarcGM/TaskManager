@@ -9,6 +9,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import jakarta.validation.constraints.NotBlank;
 
 @Entity
 @Table(name = "TASK")
@@ -19,11 +20,11 @@ public class Task implements Serializable {
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	
+	@NotBlank()
 	private String title;
-	
+	@NotBlank()
 	private String description;
-	
+	@NotBlank()
 	private LocalDate expirationDate;
 	
 	private List<String> tags;
