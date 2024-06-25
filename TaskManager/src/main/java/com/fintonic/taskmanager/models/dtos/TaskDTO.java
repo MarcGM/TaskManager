@@ -1,8 +1,11 @@
 package com.fintonic.taskmanager.models.dtos;
 
+import java.sql.Date;
 import java.time.LocalDate;
 import java.util.List;
+
 import com.fasterxml.jackson.annotation.JsonProperty;
+
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 
