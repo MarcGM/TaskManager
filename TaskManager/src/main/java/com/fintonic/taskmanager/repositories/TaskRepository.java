@@ -7,7 +7,4 @@ import com.fintonic.taskmanager.models.entities.Task;
 
 @Repository
 public interface TaskRepository extends JpaRepository<Task, Long>{
-
-	
-	
 }

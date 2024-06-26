@@ -4,6 +4,7 @@ import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.List;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -12,7 +13,7 @@ import jakarta.persistence.Table;
 import jakarta.validation.constraints.NotBlank;
 
 @Entity
-@Table(name = "TASK")
+@Table(name = "task")
 public class Task implements Serializable {
 
 	private static final long serialVersionUID = 1L;
@@ -20,13 +21,13 @@ public class Task implements Serializable {
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	@NotBlank()
+	@Column(name = "title", nullable = false)
 	private String title;
-	@NotBlank()
+	@Column(name = "description", nullable = false)
 	private String description;
-	@NotBlank()
+	@Column(name = "expirationDate", nullable = false)
 	private LocalDate expirationDate;
-	
+	@Column(name = "tags")
 	private List<String> tags;
 
 	public Long getId() {
